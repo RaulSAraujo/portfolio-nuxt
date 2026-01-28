@@ -8,3 +8,6 @@ hero:
 seo:
   title: Raul Silva Araujo - Desenvolvedor Front-end e Mobile
   description: Bem-vindo ao meu portfólio! Sou Raul Silva Araujo, Desenvolvedor Front-end e Mobile especializado em Vue, Nuxt, JavaScript, TypeScript
+about:
+  title: Sobre mim
+  description: Como desenvolvedor front-end com 5 anos de experiência, utilizo minha formação em Desenvolvedor multiplataforma pela Universidade Fatec Franca para criar soluções eficientes e escaláveis. Atuo com Vue, Nuxt, JavaScript, TypeScript para criar interfaces modernas e responsivas.

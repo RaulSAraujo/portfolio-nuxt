@@ -1,5 +1,10 @@
 import { defineCollection, defineContentConfig, z } from '@nuxt/content'
 
+const createBaseSchema = () => z.object({
+  title: z.string(),
+  description: z.string()
+})
+
 const createButtonSchema = () => z.object({
   label: z.string(),
   icon: z.string().optional(),
@@ -18,7 +23,8 @@ export default defineContentConfig({
       schema: z.object({
         hero: z.object({
           links: z.array(createButtonSchema)
-        })
+        }),
+        about: createBaseSchema()
       })
     })
   }
