@@ -1,4 +1,13 @@
 export default defineAppConfig({
+  global: {
+    picture: {
+      dark: 'https://github.com/RaulSAraujo.png',
+      light: 'https://github.com/RaulSAraujo.png',
+      alt: 'Raul S. Araujo'
+    },
+    email: 'raul.araujo.2000@hotmail.com',
+    available: true
+  },
   ui: {
     colors: {
       primary: 'green',

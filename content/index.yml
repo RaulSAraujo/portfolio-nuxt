@@ -1,1 +1,10 @@
-
+title: Olá, me chamo Raul Araujo
+description: Desenvolvedor Front-end e Mobile especializado em Vue, Nuxt, JavaScript, TypeScript Transformando ideias em experiências digitais funcionais e intuitivas.
+hero:
+  links:
+    - label: Entrar em contato
+      to: https://api.whatsapp.com/send?phone=5516992161299&text=Olá!
+      color: neutral
+seo:
+  title: Raul Silva Araujo - Desenvolvedor Front-end e Mobile
+  description: Bem-vindo ao meu portfólio! Sou Raul Silva Araujo, Desenvolvedor Front-end e Mobile especializado em Vue, Nuxt, JavaScript, TypeScript

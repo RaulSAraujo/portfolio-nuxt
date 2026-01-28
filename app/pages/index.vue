@@ -1,8 +1,22 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+const { data: page } = await useAsyncData('index', () => queryCollection('index').first())
+
+if (!page.value) {
+  throw createError({
+    statusCode: 404,
+    statusMessage: 'Page not found',
+    fatal: true
+  })
+}
+
+useSeoMeta({
+  title: page.value.seo.title,
+  description: page.value.seo.description
+})
+</script>
 
 <template>
-  <div>
-    <h1>Hello World</h1>
-    <UButton>Click me</UButton>
-  </div>
+  <UPage v-if="page">
+    <LandingHero :page />
+  </UPage>
 </template>
