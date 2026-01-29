@@ -7,7 +7,7 @@ defineProps<{
 </script>
 
 <template>
-  <UPageSection :ui="{ container: '!pt-0' }">
+  <UPageSection :ui="{ container: '!pt-0 !pb-0' }">
     <Motion
       :initial="{
         scale: 1.1,
