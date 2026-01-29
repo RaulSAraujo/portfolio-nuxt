@@ -8,7 +8,7 @@ const createBaseSchema = () => z.object({
 const createButtonSchema = () => z.object({
   label: z.string(),
   icon: z.string().optional(),
-  to: z.string(),
+  to: z.string().optional(),
   color: z.enum(['primary', 'neutral', 'success', 'warning', 'error', 'info']).optional(),
   size: z.enum(['xs', 'sm', 'md', 'lg', 'xl']).optional(),
   variant: z.enum(['solid', 'outline', 'subtle', 'soft', 'ghost', 'link']).optional(),
@@ -22,7 +22,7 @@ export default defineContentConfig({
       source: 'index.yml',
       schema: z.object({
         hero: z.object({
-          links: z.array(createButtonSchema)
+          links: z.array(createButtonSchema())
         }),
         about: createBaseSchema(),
         experience: createBaseSchema().extend({
@@ -70,6 +70,13 @@ export default defineContentConfig({
         url: z.string().nonempty(),
         tags: z.array(z.string()),
         date: z.date()
+      })
+    }),
+    about: defineCollection({
+      type: 'page',
+      source: 'about.yml',
+      schema: z.object({
+        content: z.object({})
       })
     })
   }
